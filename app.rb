@@ -4,12 +4,17 @@ class App < Sinatra::Base
 
     get '/newteam' do
         erb :newteam
-
-        page.have_selector(form)
     end
 
     post '/team' do
-        
-    en
+        @name = params[:name]
+        @coach = params[:coach]
+        @pg = params[:pg]
+        @sg = params[:sg]
+        @pf = params[:pf]
+        @sf = params[:sf]
+        @c = params[:c]
+        erb :team 
+    end
 
 end
